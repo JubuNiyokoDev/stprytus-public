@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Storytus - Professional status sharing app with advanced privacy controls">
+    <meta name="keywords" content="storytus, status, sharing, privacy, social">
+    <meta property="og:title" content="Storytus - Share Your Moments">
+    <meta property="og:description" content="Professional status sharing app with advanced privacy controls">
+    <meta property="og:type" content="website">
+    <title>Storytus - Share Your Moments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+            border-radius: 24px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            animation: bounce 2s infinite;
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #A29BFE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: slideInLeft 1s ease-out 0.3s both;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 50px;
+            animation: slideInRight 1s ease-out 0.6s both;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #A29BFE;
+        }
+        
+        .card p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+        }
+        
+        .footer a {
+            color: #A29BFE;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; }
+            .cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="logo">📖</div>
+            <h1>Storytus</h1>
+            <p class="subtitle">Partagez vos moments avec style</p>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <span class="card-icon">🔒</span>
+                <h3>Privacy First</h3>
+                <p>Advanced privacy controls to share your moments with the right people</p>
+            </div>
+            
+            <div class="card">
+                <span class="card-icon">✨</span>
+                <h3>Beautiful Stories</h3>
+                <p>Create stunning status updates with custom fonts and colors</p>
+            </div>
+            
+            <div class="card">
+                <span class="card-icon">🚀</span>
+                <h3>Fast & Secure</h3>
+                <p>Lightning-fast performance with enterprise-grade security</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2 style="margin-bottom: 30px; font-size: 2rem;">Ready to get started?</h2>
+            <a href="#" class="btn">Download on Play Store</a>
+            <a href="#" class="btn">Download on App Store</a>
+        </div>
+        
+        <div class="footer">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <p style="margin-top: 20px; opacity: 0.6;">© 2025 Storytus. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Storytus Privacy Policy - How we protect your data" />
@@ -10,65 +10,144 @@
     <meta property="og:type" content="website" />
     <title>Privacy Policy - Storytus</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        line-height: 1.6;
-      }
-      h1 {
-        color: #6c5ce7;
-      }
-      h2 {
-        color: #333;
-        margin-top: 30px;
-      }
-      .last-updated {
-        color: #666;
-        font-size: 14px;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #A29BFE;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: white;
+        }
+        
+        .content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #A29BFE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            color: #A29BFE;
+            margin: 30px 0 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        .last-updated {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        strong {
+            color: #A29BFE;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content { padding: 30px 20px; }
+            h1 { font-size: 2rem; }
+        }
     </style>
-  </head>
-  <body>
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: January 2025</p>
-
-    <h2>Information We Collect</h2>
-    <p>
-      We collect information you provide when creating an account, posting
-      content, and using our services including email, display name, and profile
-      information.
-    </p>
-
-    <h2>How We Use Information</h2>
-    <p>
-      We use your information to provide and improve our services, communicate
-      with you, and ensure security.
-    </p>
-
-    <h2>Information Sharing</h2>
-    <p>
-      We do not sell your personal information. We may share data with service
-      providers who help us operate Storytus.
-    </p>
-
-    <h2>Data Security</h2>
-    <p>
-      We implement security measures to protect your information, but no system
-      is 100% secure.
-    </p>
-
-    <h2>Your Rights</h2>
-    <p>
-      You can access, update, or delete your account information. Contact us for
-      assistance.
-    </p>
-
-    <h2>Contact Us</h2>
-    <p>
-      For privacy questions, contact us at:
-      <strong>niyondikojoffreasjubu@gmail.com</strong>
-    </p>
-  </body>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        
+        <div class="header">
+            <div class="logo">📖</div>
+        </div>
+        
+        <div class="content">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: January 2025</p>
+            
+            <h2>Information We Collect</h2>
+            <p>We collect information you provide when creating an account, posting content, and using our services including email, display name, and profile information.</p>
+            
+            <h2>How We Use Information</h2>
+            <p>We use your information to provide and improve our services, communicate with you, and ensure security.</p>
+            
+            <h2>Information Sharing</h2>
+            <p>We do not sell your personal information. We may share data with service providers who help us operate Storytus.</p>
+            
+            <h2>Data Security</h2>
+            <p>We implement security measures to protect your information, but no system is 100% secure.</p>
+            
+            <h2>Your Rights</h2>
+            <p>You can access, update, or delete your account information. Contact us for assistance.</p>
+            
+            <h2>Contact Us</h2>
+            <p>For privacy questions, contact us at: <strong>niyondikojoffreasjubu@gmail.com</strong></p>
+        </div>
+    </div>
+</body>
 </html>
