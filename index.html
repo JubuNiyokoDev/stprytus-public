@@ -3,11 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Storytus - Professional status sharing app with advanced privacy controls">
-    <meta name="keywords" content="storytus, status, sharing, privacy, social">
-    <meta property="og:title" content="Storytus - Share Your Moments">
-    <meta property="og:description" content="Professional status sharing app with advanced privacy controls">
+    <meta name="description" content="Storytus - Professional status sharing app with advanced privacy controls. Share moments, stories, and updates with custom fonts, colors, and privacy settings.">
+    <meta name="keywords" content="storytus, status sharing, social media, privacy app, story sharing, moments, social network, private stories, custom status, status updates, social sharing, mobile app, android app, ios app, privacy controls, secure messaging, story maker, status creator, social platform, digital stories, personal sharing, private social, story app, status app, social stories, custom fonts, story design, privacy first, secure social, story privacy, status privacy, social media privacy, private moments, story customization, status design, social app, story platform, moments sharing, digital storytelling, private network, secure stories, story controls, status controls, social privacy, story security, private sharing, secure sharing, testimonials, reviews, advice, help, support, consultation, business promotion, advertising, product promotion, marketing, business network, professional network, community, feedback, recommendations, opinions, suggestions, tips, guidance, expertise, knowledge sharing, experience sharing, business advice, career advice, life advice, product reviews, service reviews, business reviews, customer testimonials, user testimonials, success stories, case studies, business stories, entrepreneur stories, startup stories, business tips, marketing tips, sales tips, promotion tips, advertising tips, business growth, brand promotion, product launch, service launch, business announcement, event promotion, local business, small business, freelancer, consultant, expert advice, professional advice, business consultation, marketing consultation, sales consultation, product consultation, service consultation, business support, startup support, entrepreneur support, business community, professional community, networking, business networking, professional networking, social networking, community support, peer support, expert support, business forum, discussion forum, advice forum, help forum, support forum, business platform, professional platform, consultation platform, advice platform, recommendation platform, review platform, testimonial platform, feedback platform, opinion platform, suggestion platform, tip platform, guidance platform, expertise platform, knowledge platform, experience platform">
+    <meta property="og:title" content="Storytus - Share Your Moments with Style and Privacy">
+    <meta property="og:description" content="Professional status sharing app with advanced privacy controls. Create beautiful stories with custom fonts and colors while keeping your privacy intact.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jubuniyokodev.github.io/stprytus-public/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Storytus - Professional Status Sharing App">
+    <meta name="twitter:description" content="Share your moments with style. Advanced privacy controls, custom fonts, and beautiful designs.">
+    <meta name="author" content="Storytus Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jubuniyokodev.github.io/stprytus-public/">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Storytus",
+      "description": "Professional status sharing app with advanced privacy controls",
+      "applicationCategory": "SocialNetworkingApplication",
+      "operatingSystem": "Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Business Promotion",
+        "Expert Advice & Consultation", 
+        "Testimonials & Reviews",
+        "Community Support",
+        "Professional Networking",
+        "Advanced Privacy Controls"
+      ]
+    }
+    </script>
     <title>Storytus - Share Your Moments</title>
     <style>
         * {
@@ -45,9 +77,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
             animation: bounce 2s infinite;
             box-shadow: 0 20px 40px rgba(108, 92, 231, 0.3);
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
         }
         
         h1 {
@@ -91,9 +129,9 @@
         }
         
         .card-icon {
-            font-size: 3rem;
             margin-bottom: 20px;
-            display: block;
+            display: flex;
+            justify-content: center;
         }
         
         .card h3 {
@@ -209,28 +247,47 @@
 <body>
     <div class="container">
         <div class="hero">
-            <div class="logo">📖</div>
+            <div class="logo">
+                <img src="logo.png" alt="Storytus Logo">
+            </div>
             <h1>Storytus</h1>
-            <p class="subtitle">Partagez vos moments avec style</p>
+            <p class="subtitle">Partagez, conseillez, témoignez et développez votre réseau professionnel</p>
         </div>
         
         <div class="cards">
             <div class="card">
-                <span class="card-icon">🔒</span>
-                <h3>Privacy First</h3>
-                <p>Advanced privacy controls to share your moments with the right people</p>
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#A29BFE" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <h3>Business & Advice</h3>
+                <p>Get expert advice, share testimonials, promote your business and connect with professionals</p>
             </div>
             
             <div class="card">
-                <span class="card-icon">✨</span>
-                <h3>Beautiful Stories</h3>
-                <p>Create stunning status updates with custom fonts and colors</p>
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#A29BFE" stroke-width="2">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+                </div>
+                <h3>Reviews & Testimonials</h3>
+                <p>Share experiences, read reviews, get recommendations and build trust in the community</p>
             </div>
             
             <div class="card">
-                <span class="card-icon">🚀</span>
-                <h3>Fast & Secure</h3>
-                <p>Lightning-fast performance with enterprise-grade security</p>
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#A29BFE" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Community Support</h3>
+                <p>Ask for help, share knowledge, connect with experts and grow your network</p>
             </div>
         </div>
         

@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Storytus",
+  "description": "Professional status sharing app with advanced privacy controls. Share moments, stories, and updates with custom fonts, colors, and privacy settings.",
+  "applicationCategory": "SocialNetworkingApplication",
+  "operatingSystem": "Android, iOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1000"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Storytus Team"
+  },
+  "url": "https://jubuniyokodev.github.io/stprytus-public/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.storytus.storytus",
+  "screenshot": "https://jubuniyokodev.github.io/stprytus-public/screenshot.png",
+  "featureList": [
+    "Advanced Privacy Controls",
+    "Custom Fonts and Colors", 
+    "Story Sharing",
+    "Status Updates",
+    "Secure Messaging",
+    "Private Stories",
+    "Social Networking"
+  ]
+}
