@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Storytus</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0f1221;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .message {
+        text-align: center;
+        padding: 24px;
+      }
+      .message h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+      .message p {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+    </style>
+    <script>
+      (function () {
+        var path = window.location.pathname || "/";
+        var base = "/stprytus-public/";
+        if (path.indexOf(base) !== 0) {
+          var parts = path.split("/").filter(Boolean);
+          base = parts.length > 0 ? "/" + parts[0] + "/" : "/";
+        }
+
+        var trimmed = path.replace(base, "");
+        var segments = trimmed.split("/").filter(Boolean);
+        var target = null;
+
+        if (segments.length >= 2) {
+          var type = segments[0];
+          var id = segments[1];
+          if (type === "profile" || type === "status") {
+            target = base + "#/" + type + "/" + id;
+          }
+        }
+
+        if (!target) {
+          target = base;
+        }
+
+        var search = window.location.search || "";
+        window.location.replace(target + search);
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="message">
+      <h1>Redirecting…</h1>
+      <p>Opening the requested Storytus page.</p>
+    </div>
+  </body>
+</html>
