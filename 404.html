@@ -28,6 +28,29 @@
         font-size: 14px;
         opacity: 0.8;
       }
+      .actions {
+        margin-top: 16px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .btn.primary {
+        background: #6c5ce7;
+        color: #ffffff;
+      }
+      .btn.secondary {
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+      }
     </style>
     <script>
       (function () {
@@ -41,10 +64,12 @@
         var trimmed = path.replace(base, "");
         var segments = trimmed.split("/").filter(Boolean);
         var target = null;
+        var type = null;
+        var id = null;
 
         if (segments.length >= 2) {
-          var type = segments[0];
-          var id = segments[1];
+          type = segments[0];
+          id = segments[1];
           if (type === "profile" || type === "status") {
             target = base + "#/" + type + "/" + id;
           }
@@ -55,7 +80,43 @@
         }
 
         var search = window.location.search || "";
-        window.location.replace(target + search);
+        var webTarget = target + search;
+        var storeUrl =
+          "https://play.google.com/store/apps/details?id=com.storytus.storytus";
+
+        if (type && id) {
+          var appUrl = "storytus://" + type + "/" + id;
+          var intentUrl =
+            "intent://" +
+            type +
+            "/" +
+            id +
+            "#Intent;scheme=storytus;package=com.storytus.storytus;end";
+
+          var isAndroid = /Android/i.test(navigator.userAgent);
+          var openAppLink = isAndroid ? intentUrl : appUrl;
+
+          var timeout = setTimeout(function () {
+            window.location.replace(webTarget);
+          }, 1200);
+
+          window.location.href = openAppLink;
+
+          window.__storytusOpenApp = function () {
+            clearTimeout(timeout);
+            window.location.href = openAppLink;
+          };
+          window.__storytusOpenWeb = function () {
+            clearTimeout(timeout);
+            window.location.replace(webTarget);
+          };
+          window.__storytusOpenStore = function () {
+            clearTimeout(timeout);
+            window.location.href = storeUrl;
+          };
+        } else {
+          window.location.replace(webTarget);
+        }
       })();
     </script>
   </head>
@@ -63,6 +124,11 @@
     <div class="message">
       <h1>Redirecting…</h1>
       <p>Opening the requested Storytus page.</p>
+      <div class="actions">
+        <a class="btn primary" href="#" onclick="window.__storytusOpenApp && window.__storytusOpenApp(); return false;">Open in App</a>
+        <a class="btn secondary" href="#" onclick="window.__storytusOpenWeb && window.__storytusOpenWeb(); return false;">Continue on Web</a>
+        <a class="btn secondary" href="#" onclick="window.__storytusOpenStore && window.__storytusOpenStore(); return false;">Download App</a>
+      </div>
     </div>
   </body>
 </html>
